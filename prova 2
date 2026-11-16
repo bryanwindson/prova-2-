@@ -1,0 +1,36 @@
+
+class Aluno:
+
+    def __init__(self, nome, idade, nota1, nota2, nota3):
+        self.nome = nome
+        self.idade = idade
+        self.nota1 = nota1
+        self.nota2 = nota2
+        self.nota3 = nota3
+
+    def mostrar_nome(self):
+        return self.nome
+
+    def verificar_idade(self):
+        return self.idade
+
+    def calcular_media(self):
+        return (self.nota1 + self.nota2 + self.nota3) / 3
+
+    def verificar_resultado(self):
+        media = self.calcular_media()
+
+        if media >= 7:
+            return "aprovado"
+        else:
+            return "reprovado"
+
+
+# Instanciando o objeto
+aluno1 = Aluno("Leticia", 25, 7.0, 8.0, 9.0)
+
+# Exibindo os resultados
+print("Aluno:", aluno1.mostrar_nome())
+print("Idade:", aluno1.verificar_idade())
+print("Média:", aluno1.calcular_media())
+print("Resultado:", aluno1.verificar_resultado())
